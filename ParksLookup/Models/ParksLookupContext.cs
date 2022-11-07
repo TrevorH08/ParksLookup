@@ -1,8 +1,9 @@
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace ParksLookup.Models
 {
-  public class ParksLookupContext : DbContext
+  public class ParksLookupContext : IdentityDbContext<ApplicationUser>
   {
     public ParksLookupContext(DbContextOptions<ParksLookupContext> options)
       : base(options)

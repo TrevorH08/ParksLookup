@@ -5,6 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
 using ParksLookup.Models;
+using Microsoft.AspNetCore.Identity;
 
 namespace ParksLookup
 {
@@ -22,6 +23,9 @@ namespace ParksLookup
         {
             services.AddDbContext<ParksLookupContext>(opt =>
                 opt.UseMySql(Configuration["ConnectionStrings:DefaultConnection"], ServerVersion.AutoDetect(Configuration["ConnectionStrings:DefaultConnection"])));
+            services.AddIdentity<ApplicationUser, IdentityRole>()
+                .AddEntityFrameworkStores<ParksLookupContext>()
+                .AddDefaultTokenProviders();
             services.AddControllers();
         }
 
@@ -33,6 +37,8 @@ namespace ParksLookup
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseAuthentication();
+
             // app.UseHttpsRedirection();
 
             app.UseRouting();
@@ -43,6 +49,13 @@ namespace ParksLookup
             {
                 endpoints.MapControllers();
             });
+
+            // app.UseStaticFiles();
+
+            // app.Run(async (context) =>
+            // {
+            //     await context.Response.WriteAsync("Hello World!");
+            // });
         }
     }
 }
