@@ -14,6 +14,7 @@ namespace ParksLookup.Models
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
+      base.OnModelCreating(builder);
       builder.Entity<Park>()
         .HasData(
           new Park { ParkId = 1, Name = "Yellowstone", StateOrNational = "National", PointsOfInterest = "Steam Boat Geyser, Old Faithful Geyser Mammoth Hotsprings"},
