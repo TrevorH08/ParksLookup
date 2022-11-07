@@ -21,7 +21,7 @@ namespace ParksLookup
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ParksLookupContext>(opt =>
-                opt.UseMySql(Configuration["ConnectionStrings:DefaultConnection"], ServerVersion.AutoDetect(Configuration["ConnectoinStrings:DefaultConnection"])));
+                opt.UseMySql(Configuration["ConnectionStrings:DefaultConnection"], ServerVersion.AutoDetect(Configuration["ConnectionStrings:DefaultConnection"])));
             services.AddControllers();
         }
 
