@@ -21,9 +21,21 @@ namespace ParksLookup.Controllers
     }
 
     [HttpGet]
-    public async Task<ActionResult<IEnumerable<Park>>> Get()
+    public async Task<ActionResult<IEnumerable<Park>>> Get(string stateOrNational, string name)
     {
-      return await _db.Parks.ToListAsync();
+      var query = _db.Parks.AsQueryable();
+
+      if (stateOrNational != null)
+      {
+        query = query.Where(entry => entry.StateOrNational == stateOrNational);
+      }
+
+      if (name != null)
+      {
+        query = query.Where(entry => entry.Name == name);
+      }
+      
+      return await query.ToListAsync();
     }
 
     [HttpPost]
