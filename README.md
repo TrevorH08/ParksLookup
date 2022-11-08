@@ -26,22 +26,51 @@ _This API also has a WIP Authorization addition. The ApplicationUser.cs file has
 * _Make sure you have Entity Framework Core installed at a Global level. To Ensure, paste the following into your terminal_
 ** _$ dotnet tool install --global dotnet-ef --version 5.0.1_
 * _Create a file in the main project folder /ParksLookup called appsettings.json_
-* _Enter this code into the file: 
+* _Enter this code into the file:_
+
+```
 {
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft": "Warning",
+      "Microsoft.Hosting.Lifetime": "Information"
+    }
+  },
+  "AllowedHosts": "*",
   "ConnectionStrings": {
-      "DefaultConnection": "Server=localhost;Port=3306;database=parks_lookup;uid=[ENTER YOUR USERNAME];pwd=[ENTER YOUR PASSWORD];"
+    "DefaultConnection": "Server=localhost;Port=3306;database=parks_lookup;uid=root;pwd=epicodus;"
   }
-}_
+}
+```
+
 * _From there run the following commands in the terminal:_
-* _$ dotnet add package Microsoft.EntityFrameworkCore -v 5.0.0_
-* _$ dotnet add package Pomelo.EntityFrameworkCore.MySql -v 5.0.0-alpha.2_
-* _$ dotnet add package Microsoft.EntityFrameworkCore.Design -v 5.0.0_
-* _$ dotnet add package Microsoft.AspNetCore.Identity.EntityFrameworkCore -v 5.0.0_
-* _$ dotnet restore_
-* _$ dotnet build_
-* _$ dotnet ef migrations add Initial_
-* _$ dotnet ef database update_
-* _$ dotnet run_
+``` $ dotnet add package Microsoft.EntityFrameworkCore -v 5.0.0 ```
+``` $ dotnet add package Pomelo.EntityFrameworkCore.MySql -v 5.0.0-alpha.2 ```
+``` $ dotnet add package Microsoft.EntityFrameworkCore.Design -v 5.0.0 ```
+``` $ dotnet add package Microsoft.AspNetCore.Identity.EntityFrameworkCore -v 5.0.0 ```
+``` $ dotnet restore ```
+``` $ dotnet build ```
+``` $ dotnet ef migrations add Initial ```
+``` $ dotnet ef database update ```
+``` $ dotnet run ```
+
+## Endpoints
+
+```
+GET /api/parks
+GET /api/parks/{id}
+POST /api/parks
+DELETE /api/parks/{id}
+PUT /api/parks/{id}
+```
+
+### Search Parameters
+
+```
+/api/parks?stateOrNational=[ENTER STATE OR NATIONAL]
+/api/parks?name=[ENTER NAME OF PARK]
+```
 
 ## Known Bugs
 
