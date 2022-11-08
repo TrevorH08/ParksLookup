@@ -44,16 +44,16 @@ _This API also has a WIP Authorization addition. The ApplicationUser.cs file has
 }
 ```
 
-* _From there run the following commands in the terminal:_
-``` $ dotnet add package Microsoft.EntityFrameworkCore -v 5.0.0 ```
-``` $ dotnet add package Pomelo.EntityFrameworkCore.MySql -v 5.0.0-alpha.2 ```
-``` $ dotnet add package Microsoft.EntityFrameworkCore.Design -v 5.0.0 ```
-``` $ dotnet add package Microsoft.AspNetCore.Identity.EntityFrameworkCore -v 5.0.0 ```
-``` $ dotnet restore ```
-``` $ dotnet build ```
-``` $ dotnet ef migrations add Initial ```
-``` $ dotnet ef database update ```
-``` $ dotnet run ```
+_From there run the following commands in the terminal:_
+* ``` $ dotnet add package Microsoft.EntityFrameworkCore -v 5.0.0 ```
+* ``` $ dotnet add package Pomelo.EntityFrameworkCore.MySql -v 5.0.0-alpha.2 ```
+* ``` $ dotnet add package Microsoft.EntityFrameworkCore.Design -v 5.0.0 ```
+* ``` $ dotnet add package Microsoft.AspNetCore.Identity.EntityFrameworkCore -v 5.0.0 ```
+* ``` $ dotnet restore ```
+* ``` $ dotnet build ```
+* ``` $ dotnet ef migrations add Initial ```
+* ``` $ dotnet ef database update ```
+* ``` $ dotnet run ```
 
 ## Endpoints
 
