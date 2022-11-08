@@ -39,7 +39,7 @@ _This API also has a WIP Authorization addition. The ApplicationUser.cs file has
   },
   "AllowedHosts": "*",
   "ConnectionStrings": {
-    "DefaultConnection": "Server=localhost;Port=3306;database=parks_lookup;uid=root;pwd=epicodus;"
+    "DefaultConnection": "Server=localhost;Port=3306;database=parks_lookup;uid=root;pwd=[ENTER PASSWORD];"
   }
 }
 ```
