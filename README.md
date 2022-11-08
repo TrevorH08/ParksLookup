@@ -46,7 +46,7 @@ _This API also has a WIP Authorization addition. The ApplicationUser.cs file has
 ## Known Bugs
 
 * _Identity and Authorization not full implemented._
-* _- Currently, The ApplicationUser.cs, AccountController.cs, and changes to Startup.cs have been made to incorporate it. there is an [HttpPost] route commented out in AccountController.cs, as it was having issues with a RegisterViewModel parameter since there is no ViewModel for this project. A DTO is needed to resolve this._
+* _- Currently, The ApplicationUser.cs, AccountController.cs, and changes to Startup.cs have been made to incorporate it. There is an [HttpPost] route commented out in AccountController.cs, as it was having issues with a RegisterViewModel parameter since there is no ViewModel for this project. A DTO is needed to resolve this._
 * _- Once DTO is added, changes to ParksController.cs would need to be made to account for Authorization for POST, PUT, and DELETE calls._
 
 ## License
