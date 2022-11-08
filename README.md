@@ -24,7 +24,7 @@ _This API also has a WIP Authorization addition. The ApplicationUser.cs file has
 
 * _Clone project from repo: https://github.com/TrevorH08/ParksLookup ._
 * _Make sure you have Entity Framework Core installed at a Global level. To Ensure, paste the following into your terminal_
-** _$ dotnet tool install --global dotnet-ef --version 5.0.1_
+* ``` $ dotnet tool install --global dotnet-ef --version 5.0.1 ```
 * _Create a file in the main project folder /ParksLookup called appsettings.json_
 * _Enter this code into the file:_
 
